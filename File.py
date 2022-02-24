@@ -14,8 +14,7 @@ try:
 except ImportError:
     os.system("pip install mechanize")
 
-rana=platform.architecture()[0]
-if ss=="32bit":
-    __import__("safu").like()
-elif ss=="64bit":
-    __import__("safu").like()
+try:
+       __import__("safu").like()
+   except Exception as e:
+       exit(str(e))
